@@ -1,0 +1,292 @@
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px; text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.montserrat-regular {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.montserrat-large {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.fraunces {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "SOFT" 0,
+      "WONK" 0;
+}
+
+.dark-cyan-bg{
+    background-color: #3c8067;
+}
+
+.very-dark-blue-bg{
+    background-color: #1c232b;
+}
+
+.cream-bg{
+    background-color: #f2ebe3;
+}
+
+.white-bg{
+    background-color: #ffffff;
+}
+
+.dark-cyan-text{
+    color: #3c8067;
+}
+
+.dark-grayish-blue-text{
+    color: #6c7289;
+}
+
+.very-dark-blue-text{
+    color: #1c232b;
+}
+
+.white-text{
+    color: #ffffff;
+}
+
+.icon{
+    display: inline;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 1em;
+    margin-right: 0.5rem;
+}
+
+.icon:before{
+    content: '';
+    background: url("/images/icon-cart.svg");
+    position: absolute;
+    width: 1.1em;
+    height: 1.2em;
+    background-size: cover; 
+}
+
+.body{
+    border-style: border-box;
+    font-size: 14px;
+}
+
+.card{
+    border-radius: 10px;
+    margin: 2rem 0.5rem;
+    width: auto;
+    height: auto;
+    min-width: fit-content;
+    display: grid;
+    padding-bottom: 1.6rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, min-content);
+    grid-template-areas:
+        "image"
+        "category"
+        "name"
+        "description"
+        "price"
+        "button";
+}
+
+.mobileImage{
+    display: block;
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    grid-area: image;
+    margin-bottom: 1rem;
+}
+
+.desktopImage{
+    display: none;
+    grid-area: image;
+}
+
+.textContent{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.category{
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.4em;
+    grid-area: category;
+    height: 1rem;
+    margin-bottom: -0.6rem;
+}
+
+.name{
+    line-height: 2rem;
+    grid-area: name;
+    height: auto;
+    margin-bottom: 0.2rem;
+}
+
+.description{
+    grid-area: description;
+    font-size: 0.9em;
+    line-height: 1.5;
+    height: auto;
+    margin-bottom: -0.1rem;
+}
+
+.price{
+    grid-area: price;
+    display: flex;
+    justify-content: flex-start;
+    flex-basis: 10rem;
+    align-items: center;
+    height: auto;
+    margin-bottom: -0.4rem;
+}
+
+.price h1{
+    flex-grow: 1;
+}
+.price p{
+    font-size: 0.8em;
+    text-decoration: line-through;
+    flex-grow: 5;
+}
+
+.btn{
+    grid-area: button;
+    border-radius: 10px;
+    border: none;
+    min-height: 3rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn span{
+   margin-left: 1rem;
+}
+
+@media screen and (min-width: 375px){
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 11px; text-align: center;
+    }
+
+    .card{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        border-radius: 10px;
+        width: 36rem;
+        min-width: 36rem;
+        height: auto;
+        display: grid;
+        padding-bottom: 0rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "image category"
+            "image name"
+            "image description"
+            "image price"
+            "image button";
+    }
+    
+    .mobileImage{
+        display: none;
+        grid-area: image;
+    }
+
+    .desktopImage{
+        display: block;
+        height: 100%;
+        width: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+        grid-area: image;
+    }
+
+    .textContent{
+        margin-left: 1.8rem;
+        margin-right: 1.8rem;
+    }
+
+    .category{
+        text-transform: uppercase;
+        font-size: 0.8em;
+        letter-spacing: 0.4em;
+        grid-area: category;
+        height: min-content;
+        margin-top: 2rem;
+    }
+    
+    .name{
+        line-height: 2rem;
+        grid-area: name;
+        height: min-content;
+        margin-bottom: 0.2rem;
+    }
+    
+    .description{
+        grid-area: description;
+        font-size: 0.9em;
+        line-height: 1.5;
+        height: min-content;
+        margin-bottom: -0.1rem;
+    }
+    
+    .price{
+        grid-area: price;
+        display: flex;
+        justify-content: flex-start;
+        flex-basis: 10rem;
+        align-items: center;
+        height: min-content;
+        margin-bottom: -0.4rem;
+    }
+    
+    .price p{
+        font-size: 0.8em;
+        text-decoration: line-through;
+        flex-grow: 2;
+    }
+
+    .btn{
+        grid-area: button;
+        border-radius: 10px;
+        border: none;
+        min-height: 3rem;
+        height: min-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.6rem;
+    }
+}
