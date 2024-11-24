@@ -131,7 +131,7 @@
 
 .category{
     text-transform: uppercase;
-    font-size: 0.8em;
+    font-size: 0.75em;
     letter-spacing: 0.4em;
     grid-area: category;
     height: 1rem;
@@ -198,12 +198,12 @@
 
     .card{
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
         border-radius: 10px;
-        width: 36rem;
-        min-width: 36rem;
+        width: 38rem;
+        min-width: 38rem;
         height: auto;
         display: grid;
         padding-bottom: 0rem;
@@ -240,7 +240,7 @@
 
     .category{
         text-transform: uppercase;
-        font-size: 0.8em;
+        font-size: 0.75em;
         letter-spacing: 0.4em;
         grid-area: category;
         height: min-content;
